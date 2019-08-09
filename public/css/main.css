@@ -1,0 +1,26 @@
+/* body {
+    background: rgba(188, 190, 192, 0.7)
+} */
+
+.top-heading {
+    height: auto;
+    background: rgba(27, 28, 29, 0.7);
+    color: white;
+}
+
+.top-outer-heading {
+    width: 100%;
+}
+
+/* file upload css */
+body {
+    padding: 1em;
+}
+
+.ui.action.input input[type="file"] {
+    display: none;
+}
+
+/* .ui.dimmer {
+    background: rgba(255, 255, 255, .85) !important;
+} */

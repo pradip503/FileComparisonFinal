@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    {{!-- bootstrap css --}}
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+
+    {{!-- sementic ui css --}}
+    <link rel="stylesheet" href="/sementic_ui/semantic.min.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+
+    <link href="/css/material-dashboard.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="/css/mdb.min.css">
+
+    {{!-- custom ui css --}}
+    <link rel="stylesheet" href="/css/sidebar.css">
+
+    {{!-- custom ui css --}}
+    <link rel="stylesheet" href="/css/main.css">
+
+    {{!-- toast --}}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
+
+    {{!-- quill css cdn --}}
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+
+
+
+
+    <title>Difference Checker</title>
+</head>
+
+<body>
+
+
+    <div class="wrapper" style="height: 0vh" id="mywrapper">
+        {{> sidebar}}
+    </div>
+
+
+    <div class="main-panel main-content-panel-overwrite">
+
+        {{> header}}
+
+        <div class="content" style="padding-top: 0px;">
+            <div class="container-fluid">
+                <!-- your content here -->
+
+
+
+                {{{ body }}}
+
+
+            </div>
+        </div>
+
+        {{> footer}}
+
+    </div>
+
+    <script src="/js/jquery.min.js"></script>
+
+    {{!-- sementic ui js --}}
+    <script src="/sementic_ui/semantic.min.js"></script>
+
+    {{!-- material sidebar --}}
+    <script type="text/javascript" src="/js/material-dashboard.js"></script>
+
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="/js/popper.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="/js/mdb.js"></script>
+
+    {{!-- custom js --}}
+    <script src="/js/main.js"></script>
+
+    {{!-- custom js --}}
+    <script src="/js/teacher.js"></script>
+
+    {{!-- toast --}}
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+{{!-- bootstrap css --}}
+<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+
+{{!-- sementic ui css --}}
+<link rel="stylesheet" href="/sementic_ui/semantic.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+
+<link href="/css/material-dashboard.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="/css/mdb.min.css">
+
+{{!-- custom ui css --}}
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="/css/login.css">
+
+
+<div class="row justify-content-center mt-5">
+    <div class="col-md-5">
+
+        <div class="my-2 py-2 bg-info text-white text-center" style="border-radius: 4px;">
+            <h2>Please Login</h2>
+        </div>
+
+        <div class="ui middle aligned center aligned grid">
+            <div class="column">
+                <form onsubmit="return userValidate()" action="/login" method="post" class="ui large form">
+                    <div class="ui stacked secondary  segment">
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="user icon"></i>
+                                <input type="text" name="username" placeholder="Username">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="lock icon"></i>
+                                <input type="password" name="password" placeholder="Password">
+                            </div>
+                        </div>
+
+                        <div class="row" style="color: black!important">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="radio" name="person" value="student" checked class="mt-2"
+                                        style="height: 20px; width: 20px;">
+                                    &nbsp;
+                                    <label>
+                                        <h3>Student</h3>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="radio" name="person" value="teacher" class="mt-2"
+                                        style="height: 20px; width: 20px;">
+                                    &nbsp;
+                                    <label>
+                                        <h3>Teacher</h3>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <button class="ui fluid large teal submit button">Login</button>
+                    </div>
+
+                </form>
+
+                <div id="error_message" class="alert alert-danger" style="display: none;"></div>
+                {{#if error}}
+                <div id="error_message" class="alert alert-danger"> {{error}}</div>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="/js/login.js"></script>
+
+<script src="/js/jquery.min.js"></script>
+
+{{!-- sementic ui js --}}
+<script src="/sementic_ui/semantic.min.js"></script>
+
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="/js/popper.min.js"></script>
+
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="/js/mdb.js"></script>

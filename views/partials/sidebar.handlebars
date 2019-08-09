@@ -1,0 +1,61 @@
+<div class="sidebar sidebar-overwrite" id="test" data-color="azure">
+    <div class="mysidebar-wrapper"> </div>
+    <div class="logo">
+        <a href="#" class="simple-text logo-normal">
+            <img src="/images/user.png" class="" height="150px" width="150px"><br>
+            <center>
+                <h3>{{username}}</h3>
+                <a href="/logout">Logout</a>
+            </center>
+
+            <br><br>
+            <center>
+                <strong style="font-weight: bold;font-size: 22px;">Plagiarism Comparison</strong>
+            </center>
+        </a>
+    </div>
+
+    <div class="sidebar-wrapper">
+        <ul class="nav">
+
+            {{#if student}}
+            <li id="nav-item-overwrite" {{#if assignment}}class="nav-item active" {{/if}}>
+                <a class="nav-link" href="/assignments">
+                    <i class="fas fa-book-open" style="color: black"></i>
+                    <p class="sidebar-list-items"> <strong>Assignments</strong> </p>
+                </a>
+            </li>
+            <li id="nav-item-overwrite" {{#if upload}} class="nav-item active" {{/if}}>
+                <a class="nav-link" href="/upload">
+                    <i class="fas fa-upload" style="color: black"></i>
+                    <p class="sidebar-list-items">Upload</p>
+                </a>
+            </li>
+            {{/if}}
+            <!-- your sidebar here -->
+
+            {{!-- <li id="nav-item-overwrite" {{#if process}} class="nav-item active" {{/if}}>
+                <a class="nav-link" href="/processing">
+                    <i class="fas fa-spinner" style="color: black"></i>
+                    <p class="sidebar-list-items"> Processing </p>
+                </a>
+            </li> --}}
+
+            {{#if teacher}}
+            <li id="nav-item-overwrite" {{#if result_home}} class="nav-item active" {{/if}}>
+                <a class="nav-link" href="/teacher">
+                    <i class="fas fa-book" style="color: black"></i>
+                    <p class="sidebar-list-items"> Results </p>
+                </a>
+            </li>
+            <li id="nav-item-overwrite" {{#if compare}} class="nav-item active" {{/if}}>
+                <a class="nav-link" href="/compare">
+                    <i class="fas fa-adjust" style="color: black"></i>
+                    <p class="sidebar-list-items"> Comparison </p>
+                </a>
+            </li>
+            {{/if}}
+
+        </ul>
+    </div>
+</div>

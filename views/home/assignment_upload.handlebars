@@ -1,0 +1,43 @@
+<div class="my-2 py-2 bg-success text-white text-center" style="border-radius: 4px;">
+    <h2>Upload Assignment</h2>
+</div>
+
+
+
+<div class="card p-5">
+
+    {{!-- error messages --}}
+
+    {{#if error}}
+    <div class="ui negative message mt-2">
+        <i class="close icon"></i>
+        <div class="header text-center">
+            {{ error }}
+        </div>
+    </div>
+    {{/if}}
+
+    <form class="ui form" method="POST" onsubmit="return checkFileValidation()" action="/uploadAssignment"
+        enctype="multipart/form-data">
+        <div class="field">
+            <label>Assignment Name: </label>
+            <input required type="text" name="title" placeholder="Title" value="{{title}}">
+        </div>
+
+        <div class="field">
+            <label>Upload File(pdf):</label>
+            <div class="ui action input">
+                <input type="text" placeholder="File 1" readonly>
+                <input type="file" name="assignment_file" accept="application/pdf" id="assignment_file">
+                <div class="ui icon button">
+                    <i class="attach icon"></i>
+                </div>
+                <div style="color: red; text-align: center;" id="error_file"></span>
+                </div>
+            </div>
+
+            <hr>
+
+            <center><button class="ui large orange button" type="submit">Submit</button></center>
+    </form>
+</div>

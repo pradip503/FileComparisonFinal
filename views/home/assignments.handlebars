@@ -1,0 +1,118 @@
+<div class="my-2 py-2 bg-success text-white text-center" style="border-radius: 4px;">
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h2>Assignments</h2>
+        </div>
+    </div>
+</div>
+
+{{!-- display success message --}}
+{{#if success_message}}
+<div class="ui bg-success message">
+    <i class="close icon"></i>
+    <div class="header text-center text-white">
+        {{ success_message }}
+    </div>
+</div>
+{{/if}}
+
+{{!-- whole page loader --}}
+<div class="ui inverted dimmer" id="loader">
+    <div class="ui large text loader">Loading</div>
+</div>
+
+
+<div class="card p-3">
+    <table class="ui celled table text-center">
+        <thead>
+            <tr>
+                <th>S.N.</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Download</th>
+                <th>Status</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {{#each assignments}}
+            <tr>
+                <td data-label="S.N.">{{formatIndex @index }}</td>
+                <td data-label="Title">{{ title }}</td>
+                <td data-label="Author">{{ author }}</td>
+                <td data-label="Download">
+                    <center>
+                        <img src="../../images/pdf.jpeg" height="30" alt="pdf"><br>
+                        <a href="/downloadAssignment/{{title}}">Download</a>
+                    </center>
+                </td>
+                <td data-label="Status">
+                    {{#if (checkStatus status)}}
+                    <button class="mini ui green  button" style="min-width:74px">
+                        {{ status }}
+                    </button>
+                    {{else}}
+                    <button class="mini ui red  button" style="min-width:74px">
+                        {{ status }}
+                    </button>
+                    {{/if}}
+                </td>
+                <td data-label="Message">
+                    <button onclick="displayMessage(`{{message}}`)" style="padding: 0px; background: none;border: 0px;">
+                        <div class="ui compact menu" style="border: 0px; background: aqua;">
+                            <a class="item">
+                                <i class="icon bell"></i>
+                                {{#if (checkIfThereIsMessage status)}}
+                                <div class="floating ui  red label">1</div>
+                                {{/if}}
+                            </a>
+                        </div>
+                    </button>
+                </td>
+            </tr>
+            {{/each}}
+
+        </tbody>
+    </table>
+
+</div>
+
+
+
+{{!-- dispaly message modal --}}
+<div class="ui tiny modal" id="messageModal" style="top: auto; bottom: auto; left: auto; right: auto;">
+    <div class="header">
+        <center>Message</center>
+    </div>
+    <div class="content" id="messageContent" style="text-align: center">
+
+    </div>
+    <div class="actions">
+        <center>
+            <div class="ui cancel green button">Ok</div>
+        </center>
+    </div>
+</div>
+
+
+{{!-- confirm delete modal --}}
+
+<div class="ui mini modal" style="top: auto; bottom: auto; left: auto; right: auto;">
+    <div class="header">Confirm Deletion</div>
+    <div class="content">
+        <p> Are you sure to delete this assignment ?</p>
+    </div>
+    <div class="actions">
+        <button class="ui cancel button green">No</button>
+        <button class="ui approve button red">Yes</button>
+    </div>
+</div>
+
+
+
+
+
+
+{{!-- <button onclick="deleteAssignment({{id}},'{{title}}')" class="ui red basic button">Delete</button> --}}

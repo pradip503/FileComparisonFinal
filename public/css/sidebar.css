@@ -1,0 +1,187 @@
+/* .content {
+  background-image: url("../images/nepathya-logo.jpg") !important;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.4;
+} */
+
+
+/* content overwrite */
+.main-panel>.content {
+  margin-top: 0px;
+}
+
+/* our goal overwrite */
+.card {
+  border: 0px;
+  margin-top: 20px;
+  opacity: 1;
+}
+
+/* .NSC-link, .NSC-link:hover  {
+      text-decoration: none;
+    } */
+
+.sidebar-overwrite {
+  z-index: 1;
+}
+
+.sidebar-overwrite .mysidebar-wrapper {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url("../images/sidebar-1.jpg") center center;
+  opacity: .2;
+  width: 100%;
+  height: 100%;
+}
+
+/* sidebar mobile view overwrite */
+@media (max-width: 991px) {
+
+  .sidebar::before,
+  .off-canvas-sidebar nav .navbar-collapse::before {
+    background-color: white;
+    z-index: -1;
+  }
+
+  .sidebar .logo .simple-text {
+    white-space: normal !important;
+    padding: 0px;
+  }
+}
+
+
+/* sidebar items hover  css overwrite */
+
+
+
+.sidebar .logo .simple-text {
+  white-space: normal !important;
+  padding: 0px;
+}
+
+.sidebar-list-items {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.welcome_heading {
+  font-weight: bold;
+  color: purple;
+  text-align: center;
+}
+
+.material-icon-overwrite {
+  color: black !important;
+}
+
+.main-content-panel-overwrite {
+  background: transparent;
+  background-color: lightskyblue;
+}
+
+.sidebar .logo {
+  padding: 0px;
+}
+
+.main-panel>.content {
+  padding: 0px;
+}
+
+.navbar.navbar-transparent {
+  padding-top: 0px;
+}
+
+.navbar_overwrite {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+/* our goal text */
+.our_goal_text {
+  font-size: 20px;
+}
+
+
+
+/* copied card css */
+
+.img-gradient {
+  position: relative;
+  display: inline-block;
+}
+
+.img-gradient:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background: -moz-linear-gradient(top, rgba(0, 47, 75, 0.5) 0%, rgba(220, 66, 37, 0.5) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(220, 66, 37, 0.5)), color-stop(100%, rgba(0, 47, 75, 0.5)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(0, 47, 75, 0.5) 0%, rgba(220, 66, 37, 0.5) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(0, 47, 75, 0.5) 0%, rgba(220, 66, 37, 0.5) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(0, 47, 75, 0.5) 0%, rgba(220, 66, 37, 0.5) 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0, 47, 75, 0.5) 0%, rgba(220, 66, 37, 0.5) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#002f4b', endColorstr='#00000000', GradientType=0);
+  /* IE6-9 */
+}
+
+.img-gradient img {
+  display: block;
+}
+
+.img-gradient-overlay {
+  /* FF3.6+ */
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(rgba(0, 47, 75, 0.5) 0%, rgba(220, 66, 37, 0.5) 100%);
+  background: -o-linear-gradient(rgba(0, 47, 75, 0.5) 0%, rgba(220, 66, 37, 0.5) 100%);
+  background: linear-gradient(rgba(0, 47, 75, 0.5) 0%, rgba(220, 66, 37, 0.5) 100%);
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#002f4b', endColorstr='#00000000', GradientType=0);
+  /* IE6-9 */
+  border-radius: .3rem;
+}
+
+
+
+/* our team css */
+
+.collection-card .stripe.dark {
+  background-color: rgba(0, 0, 0, .7);
+}
+
+.collection-card .stripe {
+  position: absolute;
+  bottom: 3rem;
+  width: 100%;
+  text-align: center;
+  padding: 1.2rem;
+}
+
+.collection-card .stripe.dark a p {
+  color: #eee;
+}
+
+.collection-card .stripe a p {
+  padding: 0;
+  margin: 0;
+  letter-spacing: .25rem;
+}

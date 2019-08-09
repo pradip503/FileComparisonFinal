@@ -1,0 +1,42 @@
+<div class="my-2 py-2 bg-success text-white text-center" style="border-radius: 4px;">
+    <h2>Process Documents</h2>
+</div>
+
+<div class="ui inverted dimmer" id="loader">
+    <div class="ui large text loader" >Loading</div>
+</div>
+
+<div class="card p-3">
+    <table class="ui celled table text-center">
+        <thead>
+            <tr>
+                <th>S.N.</th>
+                <th>Title</th>
+                <th>Operation</th>
+            </tr>
+        </thead>
+        <tbody >
+
+            {{#each unprocessed_assignments}}
+            <tr>
+                <td data-label="S.N.">{{formatIndex @index }}</td>
+                <td data-label="Title">{{ title }}</td>
+                <td data-label="Operation">
+                    <center>
+                    <a href="/processDocument/{{title}}/{{id}}">
+                        <button 
+                        class="small ui orange  button" 
+                        style="min-width:74px"
+                        >
+                            Process
+                        </button>
+                    </a>
+                    </center>
+                </td>
+            </tr>
+            {{/each}}
+
+        </tbody>
+    </table>
+
+</div>
